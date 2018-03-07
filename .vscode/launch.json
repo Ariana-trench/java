@@ -6,7 +6,27 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch)",
+            "name": "RandomRollCall01 Debug (Launch)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "RandomRollCall01",
+            "args": ""
+        },
+    {
+        "type": "java",
+        "name": "CalcluateE Debug (Launch)",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "console": "internalConsole",
+        "stopOnEntry": false,
+        "mainClass": "CalculateE",
+        "args": ""
+    },
+        {
+            "type": "java",
+            "name": "HelloWorld Debug (Launch)",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
