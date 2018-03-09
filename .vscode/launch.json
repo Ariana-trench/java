@@ -6,6 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestCase Debug (Launch)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "TestCase",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "RandomRollCall01 Debug (Launch)",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -33,13 +43,13 @@
             "stopOnEntry": false,
             "mainClass": "HelloWorld",
             "args": ""
-        },
-        {
-            "type": "java",
-            "name": "Debug (Attach)",
-            "request": "attach",
-            "hostName": "localhost",
-            "port": 0
         }
+        // {
+        //     "type": "java",
+        //     "name": "Debug (Attach)",
+        //     "request": "attach",
+        //     "hostName": "localhost",
+        //     "port": 0
+        // }
     ]
 }
