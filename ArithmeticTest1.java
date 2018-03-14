@@ -5,13 +5,16 @@ public class ArithmeticTest1{
     public static void main(String[] args) throws Exception{
         // init
         char op = args[0].charAt(0);
+        char ops[] = {'+','-','X','/'};
+        boolean isR = op=='r'?true:false;
         int lenOfNum = Integer.parseInt(args[1]);
         int numOfQes = 10;
         int round = 0;
         int correctNum = 0;
         Random rand=new Random(new Date().getTime());
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int store[][] = new int[numOfQes][6];
+        int store[][] = new int[numOfQes][7];  // x op y c_ans c_rest u_ans u_rest
+
 
         // create question and get corrent answer
         while(round!=numOfQes){
@@ -19,6 +22,9 @@ public class ArithmeticTest1{
             int y = rand.nextInt((int)Math.pow(10, lenOfNum));
             int correctAns = 0;
             int rest = 0;
+            if(isR){
+                op = ops[rand.nextInt(4)];
+            }
             switch (op) {
                 case '+':
                     correctAns = x + y;
@@ -62,27 +68,25 @@ public class ArithmeticTest1{
             
             // store data
             store[round][0] = x;
-            store[round][1] = y;
-            store[round][2] = correctAns;
-            store[round][3] = rest;
-            store[round][4] = ans;
-            store[round][5] = ans_rest;
+            store[round][1] = op=='+'?0:(op=='-'?1:(op=='X'?2:3));
+            store[round][2] = y;
+            store[round][3] = correctAns;
+            store[round][4] = rest;
+            store[round][5] = ans;
+            store[round][6] = ans_rest;
             round++;
         }
 
         // show question and answer
-        if(op=='/'){
-            System.out.println("Ques \t CorAns \t UsrAns");
-            String formatString="%1$"+lenOfNum+"d "+op+" %2$"+lenOfNum+"d = %3$"+lenOfNum+"d...%4$"+lenOfNum+"d\t%5$"+lenOfNum+"d...%6$"+lenOfNum+"d\n";
-            for(int i=0; i<numOfQes; i++){
-                System.out.printf(formatString,store[i][0], store[i][1],store[i][2],store[i][3],store[i][4],store[i][5]);
+        System.out.println("Ques\tCAns\tUAns");
+        for(int i=0; i<numOfQes; i++){
+            if(ops[store[i][1]]=='/'){
+                String formatString="%1$"+lenOfNum+"d "+ops[store[i][1]]+" %2$"+lenOfNum+"d = %3$"+lenOfNum+"d...%4$"+lenOfNum+"d\t%5$"+lenOfNum+"d...%6$"+lenOfNum+"d\n";
+                System.out.printf(formatString,store[i][0], store[i][2],store[i][3],store[i][4],store[i][5],store[i][6]);
             }
-        }
-        else{
-            System.out.println("Ques\tCorAns\tUsrAns");
-            String formatString="%1$"+lenOfNum+"d "+op+" %2$"+lenOfNum+"d = %3$"+(lenOfNum+2)+"d %4$"+(lenOfNum+2)+"d\n";
-            for(int i=0; i<numOfQes; i++){
-                System.out.printf(formatString,store[i][0], store[i][1],store[i][2],store[i][4]);
+            else{
+                String formatString="%1$"+lenOfNum+"d "+ops[store[i][1]]+" %2$"+lenOfNum+"d = %3$"+(lenOfNum+2)+"d\t%4$"+(lenOfNum+2)+"d\n";
+                System.out.printf(formatString,store[i][0], store[i][2],store[i][3],store[i][5]);
             }
         }
         System.out.println("Score: "+correctNum*10);
