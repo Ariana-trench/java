@@ -6,6 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "ArithmeticTest1",
+            "args": "+ 1"
+        },
+        {
+            "type": "java",
             "name": "TestCase Debug (Launch)",
             "request": "launch",
             "cwd": "${workspaceFolder}",
