@@ -1,7 +1,7 @@
 {
     "files.defaultLanguage": "java",
     "code-runner.runInTerminal": true, 
-    "java.home": "C:\\PF\\java\\jdk-9.0.4",
+    // "java.home": "C:\\PF\\java\\jdk-9.0.4",
     "code-runner.defaultLanguage": "Java",
     "code-runner.saveAllFilesBeforeRun": true,
     "code-runner.saveFileBeforeRun": true
