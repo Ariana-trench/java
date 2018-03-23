@@ -4,6 +4,16 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "type": "java",
+            "name": "ArithmeticTest2 Debug (Launch)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "ArithmeticTest2",
+            "args": "1"
+        },
     {
         "type": "java",
         "name": "KMP Debug (Launch)",
