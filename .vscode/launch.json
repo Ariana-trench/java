@@ -6,6 +6,26 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArithmeticTest4UsingInterface Debug (Launch) with Arguments Prompt",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "ArithmeticTest4UsingInterface",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
+            "name": "ArithmeticTest3 Debug (Launch) with Arguments Prompt",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "ArithmeticTest3",
+            "args": "r 2"
+        },
+        {
+            "type": "java",
             "name": "ArithmeticTest2 Debug (Launch)",
             "request": "launch",
             "cwd": "${workspaceFolder}",
