@@ -6,6 +6,46 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestShape Debug (Launch) with Arguments Prompt",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "TestShape",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
+            "name": "JudgeTriangle Debug (Launch)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "JudgeTriangle",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Calculate Debug (Launch)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "Calculate",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "ArithmeticTest4 Debug (Launch) with Arguments Prompt",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopOnEntry": false,
+            "mainClass": "ArithmeticTest4",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
             "name": "ArithmeticTest4UsingInterface Debug (Launch) with Arguments Prompt",
             "request": "launch",
             "cwd": "${workspaceFolder}",
